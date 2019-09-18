@@ -1,10 +1,8 @@
-def check_param(param,value):
+def check_param(param):
     total = 0
     for letter in param:
-         total += ord(letter)
-    if ord != value:
-        return False
-    return True
+        total += ord(letter)
+    return total
 
 def main_function():
     print('- Type `exit` to stop the application')
@@ -20,16 +18,20 @@ def main_function():
             print('- Too long try again')
         else:
             user_input = user_input.split('-')
-            if check_param("".join(user_input),1121):
-                if check_param(user_input[0],377):
-                    if check_param(user_input[0],225):
-                        if check_param(user_input[0],519):
-                            print('- Like a Boss')
+            if check_param("".join(user_input)) == 1121:
+                if check_param(user_input[0]) == 377:
+                    if check_param(user_input[1]) == 225:
+                        if check_param(user_input[2]) == 519:
+                            print('--------------------------------------------------------')
+                            print('- Like a Boss -')
+                            print('--------------------------------------------------------')
+                            break
             print('- Wrong code try again')
-
+        
 
 if __name__ == '__main__':
     main_function()
+
 
 
 
